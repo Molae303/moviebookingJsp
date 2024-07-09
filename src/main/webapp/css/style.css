@@ -1,0 +1,1375 @@
+/* css스타일 */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+	font-style: normal;
+}
+
+a, a:hover, a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+h2 {
+	margin: 10px 0;
+	margin-bottom: 30px;
+}
+
+hr {
+	background: rgba(192, 192, 192, 0.527);
+	height: 1px;
+	border: 0;
+}
+/* header */
+body>header {
+	width: 1200px;
+	height: 80px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 auto;
+}
+
+body>header ul {
+	display: flex;
+}
+
+body>header>nav li {
+	font-size: 1.1em;
+	margin: 0 40px;
+}
+
+body>header .headerNavMenu {
+	padding: 0 4px 26px 4px;
+}
+
+body>header .headerNavMenu:hover {
+	font-weight: 700;
+	border-bottom: 4px solid #20e3b2;
+}
+
+body>header .headerNavMenu.active {
+	font-weight: 700;
+	border-bottom: 4px solid #20e3b2;
+}
+
+body>header>aside li>a {
+	padding: 0 15px;
+	font-size: 0.9em;
+	position: relative;
+}
+
+body>header>aside li:nth-child(2)>a:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 2px;
+	bottom: 1px;
+	width: 1px;
+	background: #909090;
+}
+
+body>main {
+	min-height: 700px;
+}
+
+body>footer {
+	height: 200px;
+	background-color: silver;
+}
+
+ul {
+	list-style: none;
+}
+/* main */
+/* slideshow */
+main>div.slideshow {
+	/* border: 1px solid red; */
+	margin: 30px 0 50px;
+	padding: 10px;
+	height: 400px;
+	min-width: 960px;
+	background-color: white;
+	position: relative;
+	overflow: hidden;
+}
+
+main>div.slideshow>div.slideshow_slides {
+	/* border: 1px solid red; */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: all 1s;
+}
+
+main>div.slideshow>div.slideshow_slides a {
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+main>div.slideshow>div.slideshow_nav a {
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: 62px;
+	color: white;
+	transform: translateX(-50%);
+	transform: translateY(-50%);
+	opacity: 0.3;
+}
+
+main>div.slideshow>div.slideshow_nav>a.prev {
+	margin-left: -462px;
+}
+
+main>div.slideshow>div.slideshow_nav>a.next {
+	margin-left: 400px;
+}
+
+main>div.slideshow>div.indicator {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 20px;
+	text-align: center;
+}
+
+main>div.slideshow>div.indicator a {
+	display: inline-block;
+	font-size: 24px;
+	color: white;
+	padding: 5px;
+	opacity: 0.3;
+}
+
+main>div.slideshow>div.indicator a.active {
+	color: red;
+}
+/* main > content */
+main>div.content {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+main>div.content>div.top10, main>div.content>div.readyon {
+	position: relative;
+	height: 350px;
+	margin-bottom: 50px;
+}
+
+main>div.content>div.top10>div.slideshow-type1, main>div.content>div.readyon>div.slideshow-type2
+	{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+/* 포지션 225px씩 민다. */
+main>div.content>div.top10 div.item, main>div.content>div.readyon div.item
+	{
+	width: 195px;
+	margin-right: 35px;
+	position: absolute;
+}
+
+main>div.content div.item div.btns {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 7px;
+}
+
+main>div.content div.item div.btns>button {
+	border: none;
+	background-color: white;
+	font-size: 14px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+main>div.content div.item div.btns>button:last-child {
+	color: #20e3b2;
+}
+
+main>div.content div.item div.btns>button:last-child:hover {
+	color: black;
+	transition: all 1.5s;
+}
+
+main>div.content>div.top10 div.slideshow-type1_slides, main>div.content>div.readyon div.slideshow-type2_slides
+	{
+	display: flex;
+	position: relative;
+	transition: all 0.5s;
+}
+
+main>div.content div.item div.info b {
+	color: red;
+	margin-left: 10px;
+}
+
+main>div.content div.item div.info>h4 {
+	letter-spacing: 1px;
+	font-size: 1.2em;
+}
+
+main>div.content>div.top10 div.item div.img>img, main>div.content>div.readyon div.item div.img>img
+	{
+	height: 275px;
+	width: 100%;
+	border-radius: 4%;
+	object-fit: cover;
+}
+
+main>div.content>div.top10>div.type1_nav a, main>div.content>div.readyon>div.type2_nav a
+	{
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	font-size: 30px;
+	transform: translateX(-50%);
+	transform: translateY(-50%);
+}
+
+main>div.content>div.top10>div.type1_nav>a.type1_prev, main>div.content>div.readyon>div.type2_nav>a.type2_prev
+	{
+	margin-left: -630px;
+}
+
+main>div.content>div.top10>div.type1_nav>a.type1_next, main>div.content>div.readyon>div.type2_nav>a.type2_next
+	{
+	margin-left: 600px;
+}
+
+/* main>content>mainNotice */
+/* notice */
+main>div.content>div.mainNotice {
+	display: flex;
+	justify-content: space-between;
+	margin: 40px auto;
+	padding: 40px 0;
+}
+
+main>div.content>div.mainNotice>div.notice {
+	width: 60%;
+	box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	position: relative;
+	padding-left: 10px;
+}
+
+main>div.content>div.mainNotice>div.notice h2 {
+	margin: 20px 0;
+}
+
+main>div.content>div.mainNotice>div.notice>a {
+	font-size: 25px;
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	color: #20e3b2;
+}
+
+main>div.content>div.mainNotice>div.notice>a:hover {
+	color: black;
+	transition: all 1.5s;
+}
+
+main>div.content>div.mainNotice>div.notice ul li {
+	border-bottom: 1px dotted #dddddd;
+	margin-right: 10px;
+	padding: 10px 0;
+}
+
+main>div.content>div.mainNotice>div.notice ul span {
+	font-size: 13px;
+	color: #666;
+}
+/* guide */
+main>div.content>div.mainNotice>div.guide img {
+	box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+
+/* (user)registerForm */
+main>div.content>h1 {
+	color: black;
+	margin: 20px 0px;
+	padding-bottom: 0.5rem;
+	border-bottom: 4px solid #20e3b2;
+	display: inline-block;
+}
+
+main>div.content>form>h4 {
+	font-size: 16px;
+	color: black;
+	margin: 10px 0;
+}
+
+main>div.content>form.memberRegForm {
+	width: 100%;
+	border: 1px solid silver;
+	padding: 10px;
+	margin: 0 auto;
+	color: black;
+}
+
+main>div.content>form.memberRegForm>table {
+	width: 100%;
+	border: 1px solid silver;
+	border-collapse: collapse;
+}
+
+main>div.content>form.memberRegForm>table td {
+	border-top: 1px solid lightgrey;
+	border-bottom: 1px solid lightgrey;
+	border-left: 1px solid lightgrey;
+}
+
+main>div.content>form.memberRegForm>table td.title {
+	width: 15%;
+	border-left: none;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+main>div.content>form.memberRegForm>table td.content {
+	width: 80%;
+}
+
+main>div.content>form.memberRegForm>table td>span {
+	font-size: 10px;
+	padding-left: 10px;
+}
+
+main>div.content>form.memberRegForm>table td.content>p {
+	font-size: 10px;
+	padding: 0 10px;
+	margin: 5px 0 0 0;
+}
+
+main>div.content>form.memberRegForm>table input {
+	border: 1px solid lightgray;
+	margin: 8px;
+	height: 27px;
+	border-radius: 2px;
+	background-color: #f4f4f4;
+}
+
+main>div.content>form.memberRegForm>table input[required] {
+	background-image: url(images/wrest.gif);
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+
+main>div.content>form.memberRegForm>table td.content>label {
+	font-size: 15px;
+}
+
+main>div.content>form.memberRegForm>table td.content2 {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	border: none;
+	border-left: 1px solid lightgrey;
+}
+
+main>div.content>form.memberRegForm>table td.content3>div {
+	border: 1px solid gray;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	background-color: silver;
+	font-weight: bold;
+}
+
+main>div.content>form.memberRegForm>table td.content3 {
+	display: flex;
+	align-items: center;
+}
+
+main>div.content>form.memberRegForm>.footer {
+	width: 100%;
+	text-align: center;
+	padding: 10px 0;
+}
+
+main>div.content>form.memberRegForm span.requiredMsg {
+	color: red;
+	font-weight: bold;
+}
+
+main>div.content>form.memberRegForm button {
+	padding: 0.3rem 0.8rem;
+	background-color: #20e3b2;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin-left: 0.5rem;
+}
+
+main>div.content>form.memberRegForm button:hover {
+	background-color: #1ed1a5;
+}
+
+/* login */
+main>div.login-container {
+	background-color: #ffffff;
+	margin: 0 auto;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	width: 300px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+main>div.login-container h2 {
+	margin-bottom: 1.5rem;
+	color: #333;
+}
+
+main>div.login-container .input-group {
+	margin-bottom: 1rem;
+	text-align: left;
+}
+
+main>div.login-container .input-group label {
+	display: block;
+	margin-bottom: 0.5rem;
+	color: #888;
+}
+
+main>div.login-container .input-group input {
+	width: 100%;
+	padding: 0.5rem;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+main>div.login-container .login-button {
+	background-color: #20e3b2;
+	color: white;
+	padding: 0.75rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 100%;
+	margin-bottom: 1rem;
+	transition: background-color 0.3s;
+}
+
+main>div.login-container .login-button:hover {
+	background-color: #1ed1a5;
+}
+
+main>div.login-container .links {
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.9rem;
+	color: #888;
+}
+
+main>div.login-container .links a {
+	color: #888;
+	text-decoration: none;
+}
+
+main>div.login-container .links a:hover {
+	text-decoration: underline;
+}
+
+/* noticeBoardList */
+main>div.noticeBoardList {
+	width: 60%;
+	margin: 2rem auto;
+	background-color: #ffffff;
+	padding: 2rem;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+
+main>div.noticeBoardList h1 {
+	font-size: 2rem;
+	color: #333;
+	border-bottom: 4px solid #20e3b2;
+	display: inline-block;
+	padding-bottom: 0.5rem;
+}
+
+main>div.noticeBoardList .notice-summary {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1.5rem;
+}
+
+main>div.noticeBoardList .notice-summary .search-box {
+	display: flex;
+	align-items: center;
+}
+
+main>div.noticeBoardList .notice-summary select, main>div.noticeBoardList .notice-summary input
+	{
+	padding: 0.5rem;
+	margin-right: 0.5rem;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+main>div.noticeBoardList .notice-summary button {
+	padding: 0.5rem 1rem;
+	background-color: #20e3b2;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+main>div.noticeBoardList .notice-summary button:hover {
+	background-color: #1ed1a5;
+}
+
+main>div.noticeBoardList .notice-list {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 1.5rem;
+}
+
+main>div.noticeBoardList .notice-list th, main>div.noticeBoardList .notice-list td
+	{
+	padding: 1rem;
+	border: 1px solid #ddd;
+	text-align: left;
+}
+
+main>div.noticeBoardList .notice-list th {
+	background-color: #f5f5f5;
+	font-weight: bold;
+}
+
+main>div.noticeBoardList .notice-list tr:hover {
+	background-color: #f9f9f9;
+}
+
+main>div.noticeBoardList .notice-list td:nth-child(2) {
+	width: 60%;
+}
+
+main>div.noticeBoardList .pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 1.5rem;
+}
+
+main>div.noticeBoardList .pagination a {
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	transition: background-color 0.3s;
+}
+
+main>div.noticeBoardList .pagination a.active {
+	background-color: #20e3b2;
+	color: white;
+	border-radius: 5px;
+}
+
+main>div.noticeBoardList .pagination a:hover:not(.active) {
+	background-color: #ddd;
+	border-radius: 5px;
+}
+
+main>div.noticeBoardList .form-actions {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 1.5rem;
+}
+
+main>div.noticeBoardList button[type="button"] {
+	padding: 0.5rem 1rem;
+	background-color: #20e3b2;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin-left: 0.5rem;
+}
+
+main>div.noticeBoardList button[type="button"]:hover {
+	background-color: #1ed1a5;
+}
+
+/* noticeBoardWriter */
+main>div.noticeBoardWriter {
+	width: 80%;
+	margin: 2rem auto;
+	background-color: #ffffff;
+	padding: 2rem;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+
+main>div.noticeBoardWriter h1 {
+	font-size: 2rem;
+	color: #333;
+	border-bottom: 2px solid #20e3b2;
+	display: inline-block;
+	padding-bottom: 0.5rem;
+}
+
+main>div.noticeBoardWriter form {
+	margin-top: 1.5rem;
+}
+
+main>div.noticeBoardWriter .form-group {
+	margin-bottom: 1.5rem;
+}
+
+main>div.noticeBoardWriter label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: bold;
+	color: #333;
+}
+
+main>div.noticeBoardWriter input[type="text"], main>div.noticeBoardWriter input[type="date"],
+	main>div.noticeBoardWriter select, main>div.noticeBoardWriter textarea
+	{
+	width: 100%;
+	padding: 0.5rem;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+main>div.noticeBoardWriter textarea {
+	resize: vertical;
+}
+
+main>div.noticeBoardWriter .form-actions {
+	display: flex;
+	justify-content: flex-end;
+}
+
+main>div.noticeBoardWriter button {
+	padding: 0.5rem 1rem;
+	background-color: #20e3b2;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin-left: 0.5rem;
+}
+
+main>div.noticeBoardWriter button:hover {
+	background-color: #1ed1a5;
+}
+
+/* noticeBoard Content */
+main>div.noticeContent {
+	width: 80%;
+	margin: 2rem auto;
+	background-color: #ffffff;
+	padding: 2rem;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+
+main>div.noticeContent h1 {
+	font-size: 2rem;
+	color: #333;
+	border-bottom: 2px solid #20e3b2;
+	display: inline-block;
+	padding-bottom: 0.5rem;
+}
+
+main>div.noticeContent .notice-details {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 1.5rem;
+}
+
+main>div.noticeContent .notice-details th, main>div.noticeContent .notice-details td
+	{
+	padding: 1rem;
+	border: 1px solid #ddd;
+}
+
+main>div.noticeContent .notice-details th {
+	background-color: #f5f5f5;
+	text-align: left;
+	width: 20%;
+	font-weight: bold;
+}
+
+main>div.noticeContent .notice-details td {
+	background-color: #fff;
+	vertical-align: top;
+}
+
+main>div.noticeContent .form-actions {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 1.5rem;
+}
+
+main>div.noticeContent button[type="button"] {
+	padding: 0.5rem 1rem;
+	background-color: #20e3b2;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin-left: 0.5rem;
+}
+
+main>div.noticeContent button[type="button"]:hover {
+	background-color: #1ed1a5;
+}
+
+/* updateConfirm */
+main>div.updateConfirm {
+	margin: 2rem auto;
+	background-color: #ffffff;
+	padding: 2rem;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	text-align: center;
+	width: 300px;
+}
+
+main>div.updateConfirm .lock-icon {
+	font-size: 2rem;
+	color: #333;
+	margin-bottom: 1rem;
+}
+
+main>div.updateConfirm .message {
+	font-size: 1rem;
+	color: #333;
+	margin-bottom: 2rem;
+}
+
+main>div.updateConfirm .form-group {
+	margin-bottom: 1.5rem;
+	text-align: left;
+}
+
+main>div.updateConfirm label {
+	display: block;
+	font-size: 0.875rem;
+	color: #666;
+	margin-bottom: 0.5rem;
+}
+
+main>div.updateConfirm input[type="password"], main>div.updateConfirm input[type="text"]
+	{
+	width: 100%;
+	padding: 0.5rem;
+	font-size: 1rem;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+main>div.updateConfirm .form-actions {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1.5rem;
+}
+
+main>div.updateConfirm button {
+	padding: 0.5rem 3rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+main>div.updateConfirm button[type="button"] {
+	background-color: #ddd;
+	color: #333;
+}
+
+main>div.updateConfirm button[type="button"]:hover {
+	background-color: #ccc;
+}
+
+main>div.updateConfirm button:last-child {
+	background-color: #20e3b2;
+	color: white;
+}
+
+main>div.updateConfirm button:last-child:hover {
+	background-color: #1ed1a5;
+}
+
+/* userLIst & boxofficeList */
+main>div.userList, main>div.boxofficeList {
+	margin: 0 auto 20px;
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main>div.userList h1, main>div.boxofficeList h1 {
+	text-align: center;
+	color: #333333;
+	margin-bottom: 20px;
+}
+
+main>div.userList table, main>div.boxofficeList table {
+	width: 60%;
+	border-collapse: collapse;
+	margin: 0 auto 20px;
+}
+
+main>div.userList th, main>div.userList td, main>div.boxofficeList th,
+	main>div.boxofficeList td {
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid #dddddd;
+}
+
+main>div.userList thead tr, main>div.boxofficeList thead tr {
+	background-color: #f2f2f2;
+}
+
+main>div.userList tbody tr:hover, main>div.boxofficeList tbody tr:hover
+	{
+	background-color: #f6f6f6;
+}
+
+main>div.userList .buttons, main>div.boxofficeList .buttons {
+	text-align: center;
+}
+
+main>div.userList button, main>div.boxofficeList button {
+	background-color: #e74c3c;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 0 5px;
+}
+
+main>div.userList button:hover, main>div.boxofficeList button:hover {
+	opacity: 0.9;
+}
+
+/* movieInfo */
+main>div.movieInfo {
+	width: 60%;
+	margin: 30px auto;
+}
+
+main>div.movieInfo>.header {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 20px;
+}
+
+main>div.movieInfo>.header>.movieImg img {
+	width: 220px;
+}
+
+main>div.movieInfo>.header>.Info {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+main>div.movieInfo>.header>.Info>img {
+	width: 25px;
+}
+
+main>div.movieInfo>.header>.Info>h2 {
+	font-size: 2.2em;
+	margin: 0;
+}
+
+main>div.movieInfo>.header>.Info>span {
+	color: #7f7f7f;
+}
+
+main>div.movieInfo>.header>.Info .salesShare {
+	margin-top: 10px;
+	width: 100px;
+	padding: 0.5rem 1rem;
+	border: 1px solid #7f7f7f;
+	border-radius: 15px;
+	text-align: center;
+	color: #7f7f7f;
+}
+
+main>div.movieInfo>.header>.Info .salesShare>span {
+	color: #1ed1a5;
+	font-weight: bold;
+}
+
+main>div.movieInfo>.header>.Info>.etc>h3 {
+	margin-bottom: 10px;
+}
+
+main>div.movieInfo>.header>.Info>.etc>ul {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	color: #7f7f7f;
+}
+
+main>div.movieInfo>.header>.Info>.etc>ul span {
+	display: inline-block;
+	font-weight: bold;
+	width: 40px;
+}
+
+main>div.movieInfo>.header>.btns {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+main>div.movieInfo>.header>.btns>button:first-child {
+	background-color: #20e3b2;
+}
+
+main>div.movieInfo>.header>.btns>button {
+	padding: 1rem 3.5rem;
+	background-color: #ddd;
+	color: black;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+main>div.movieInfo>.content {
+	padding: 20px;
+}
+
+main>div.movieInfo>.content>h3 {
+	margin-bottom: 10px;
+}
+
+/* movieUpdateForm */
+main>div.movieUpdate {
+	width: 60%;
+	margin: 30px auto;
+}
+
+main>div.movieUpdate>form {
+	display: flex;
+	flex-direction: column;
+}
+
+main>div.movieUpdate>form>.header {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 20px;
+}
+
+main>div.movieUpdate>form>.header>.movieImg label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+main>div.movieUpdate>form>.header>.movieImg input {
+	width: 220px;
+}
+
+main>div.movieUpdate>form>.header>.Info {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+main>div.movieUpdate>form>.header>.Info>h2 {
+	font-size: 2.2em;
+	margin: 0;
+}
+
+main>div.movieUpdate>form>.header>.Info>span {
+	color: #7f7f7f;
+}
+
+main>div.movieUpdate>form>.header>.Info .salesShare {
+	margin-top: 10px;
+	width: 100px;
+	padding: 0.5rem 1rem;
+	border: 1px solid #7f7f7f;
+	border-radius: 15px;
+	text-align: center;
+	color: #7f7f7f;
+}
+
+main>div.movieUpdate>form>.header>.Info .salesShare>span {
+	color: #1ed1a5;
+	font-weight: bold;
+}
+
+main>div.movieUpdate>form>.header>.Info>.etc>h3 {
+	margin-bottom: 10px;
+}
+
+main>div.movieUpdate>form>.header>.Info>.etc>ul {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	color: #7f7f7f;
+}
+
+main>div.movieUpdate>form>.header>.Info>.etc>ul span {
+	display: inline-block;
+	font-weight: bold;
+	width: 40px;
+}
+
+main>div.movieUpdate>form>.content {
+	padding: 20px;
+}
+
+main>div.movieUpdate>form>.content>h3 {
+	margin-bottom: 10px;
+}
+
+main>div.movieUpdate>form>.content>textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #7f7f7f;
+	border-radius: 5px;
+	resize: vertical;
+}
+
+main>div.movieUpdate>form>.content>.btns {
+	margin-top: 20px;
+	text-align: right;
+}
+
+main>div.movieUpdate>form>.content>.btns>button {
+	padding: 1rem 3.5rem;
+	background-color: #20e3b2;
+	color: black;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+/* reservationForm */
+main>div.reservation {
+	width: 1200px;
+	margin: 30px auto;
+}
+
+main>div.reservation>form>div.header {
+	display: flex;
+	background-color: #20e3b2;
+	justify-content: space-between;
+}
+
+main>div.reservation>form>div.header>h2 {
+	margin: 0;
+	padding: 20px;
+}
+
+main>div.reservation>form>div.header>button {
+	font-size: 15px;
+	padding: 20px;
+	border: none;
+	color: white;
+	background-color: #1db891;
+	cursor: pointer;
+}
+
+main>div.reservation>form>div.content {
+	display: flex;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+main>div.reservation>form>div.content>div {
+	flex: 3;
+	border-left: 1px solid #ddd;
+}
+
+main>div.reservation>form>div.content h3 {
+	padding: 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+main>div.reservation>form>div.content .list {
+	max-height: 480px;
+	overflow-y: scroll;
+}
+
+main>div.reservation>form>div.content .list::-webkit-scrollbar {
+	width: 5px;
+}
+
+main>div.reservation>form>div.content .list::-webkit-scrollbar-thumb {
+	background-color: #ddd;
+	border-radius: 5px;
+}
+
+main>div.reservation>form>div.content .list>ul>li>button {
+	padding: 20px;
+	width: 100%;
+	font-size: 1em;
+	border: none;
+	background-color: white;
+	cursor: pointer;
+	text-align: left;
+}
+
+main>div.reservation>form>div.content .list>ul>li>button:hover {
+	font-weight: bold;
+	background-color: #ececec;
+	transition: all 0.5s;
+}
+
+main>div.reservation>form>div.content>div.cinemaList {
+	flex: 2;
+}
+
+main>div.reservation>form>div.content>div.movieList {
+	flex: 3;
+}
+
+main>div.reservation>form>div.content>div.movieList>.tab {
+	padding: 15px 0;
+	border-bottom: 1px solid #ddd;
+	font-size: 0.9em;
+	background-color: #f3f3f3;
+}
+
+main>div.reservation>form>div.content>div.movieList>.tab>a {
+	position: relative;
+	padding: 0 20px;
+}
+
+main>div.reservation>form>div.content>div.movieList>.tab>a:nth-child(2)::before
+	{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 2px;
+	bottom: 1px;
+	width: 1px;
+	background: #909090;
+}
+
+main>div.reservation>form>div.content>div.movieList>.list button {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	font-size: 1.2em;
+}
+main>div.reservation>form>div.content>div.movieList>.list button  > img{
+	width: 25px;
+}
+main>div.reservation>form>div.content>div.dateList {
+	flex: 1;
+}
+
+main>div.reservation>form>div.content>div.dateList>.list {
+	max-height: 590px;
+}
+
+main>div.reservation>form>div.content>div.dateList>.list ul li.month {
+	padding: 15px 20px;
+	font-size: 1.1em;
+	font-weight: bold;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+main>div.reservation>form>div.content>div.dateList>.list ul li.saturday>button
+	{
+	color: #1e90ff;
+}
+
+main>div.reservation>form>div.content>div.dateList>.list ul li.sunday>button
+	{
+	color: #ff4a4a;
+}
+
+main>div.reservation>form>div.content>div.dateList>.list button {
+	padding: 10px 20px;
+	font-size: 0.9em;
+	background-color: #f3f3f3;
+}
+
+main>div.reservation>form>div.content>div.aside {
+	flex: 3;
+}
+
+main>div.reservation>form>div.content>div.aside>div.time>.list {
+	max-height: 270px;
+}
+
+main>div.reservation>form>div.content>div.aside>div.time>.list>h4 {
+	padding: 10px 20px 0px 20px;
+	font-weight: 500;
+}
+
+main>div.reservation>form>div.content>div.aside>div.time>.list>ul {
+	display: flex;
+	flex-wrap: wrap;
+	border-bottom: 1px solid #ddd;
+	gap: 10px;
+	padding: 20px;
+}
+
+main>div.reservation>form>div.content>div.aside>div.time>.list>ul>li {
+	width: 31%;
+}
+
+main>div.reservation>form>div.content>div.aside>div.time>.list>ul>li>button
+	{
+	padding: 15px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 0.8em;
+}
+
+main>div.reservation>form>div.content>div.aside>div.time>.list>ul>li>button>div.seat
+	{
+	margin-top: 5px;
+}
+
+main>div.reservation>form>div.content>div.aside>div.time>.list>ul>li>button>div.seat>span
+	{
+	color: #20e3b2;
+}
+
+main>div.reservation>form>div.content>div.aside>div.reserveInfo>.info {
+	padding: 30px 20px;
+	background-color: #f3f3f3;
+}
+
+main>div.reservation>form>div.content>div.aside>div.reserveInfo>.info {
+	display: flex;
+	gap: 20px;
+}
+
+main>div.reservation>form>div.content>div.aside>div.reserveInfo>.info>.movieImage
+	{
+	width: 90px;
+	height: 135px;
+	border: 1px solid #ddd;
+	background-color: white;
+}
+main>div.reservation>form>div.content>div.aside>div.reserveInfo>.info>.movieImage > img{
+	width:100%;
+}
+
+main>div.reservation>form>div.content>div.aside>div.reserveInfo>.info>.movieInfo
+	{
+	height: 135px;
+}
+
+main>div.reservation>form>div.content>div.aside>div.reserveInfo>.info>.movieInfo>div.movieNm
+	{
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+main>div.reservation>form>div.content>div.aside>div.reserveInfo>.info>.movieInfo>ul>li
+	{
+	margin-bottom: 4px;
+	font-size: 0.9em;
+}
+
+main>div.reservation>form>div.content>div.aside>div.reserveInfo>.info>.movieInfo>ul>li>span.info
+	{
+	display: inline-block;
+	width: 70px;
+	color: #909090;
+}
+
+main>div.reservation>form>div.content>div.aside>div.btn>button {
+	padding: 20px;
+	width: 100%;
+	border: none;
+	background-color: black;
+	color: white;
+	font-size: 1.2em;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+main>div.reservation>form>div.content>div.aside>div.btn>button:hover {
+	color: #20e3b2;
+	transition: all 1s;
+}
+/* reservation List 버튼선택 css  */
+main>div.reservation>form>div.content .list>ul>li>button{
+  position: relative;
+}
+main>div.reservation>form>div.content .list>ul>li>button::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 2px solid #20e3b2;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+main>div.reservation>form>div.content .list>ul>li>button.selected::before{
+  opacity: 1;
+}
+main>div.reservation>form>div.content .list>ul>li>button:not(.dateSelectBtn)::after{
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 18px;
+  width: 24px;
+  height: 24px;
+  background: url(/moviebooking/images/reservation/choice.svg) no-repeat 0 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+main>div.reservation>form>div.content .list>ul>li>button.selected::after{
+  opacity: 1;
+}
+.dateSelectBtn::after{
+  content: '';
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  width: 24px;
+  height: 24px;
+  background: url(/moviebooking/images/reservation/choice.svg) no-repeat 0 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+
